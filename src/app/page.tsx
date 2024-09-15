@@ -408,8 +408,7 @@ export default function Home() {
           }
           {result &&
           <div className="flex w-screen h-screen justify-center items-center flex-col fixed z-20">
-            <div className='text-4xl'>nih pencet tombolnya kalo bisa</div>
-            <button onClick={() => finalResult(foto,video,kine,pertunjukan)} className="bg-white text-black rounded-2xl font-bold px-4 py-2 animate-spin m-4">KAMU ADALAH...</button>
+            <button onClick={() => finalResult(foto,video,kine,pertunjukan)} className="bg-white text-black rounded-2xl font-bold px-4 py-2 animate-bounce m-4">KAMU ADALAH... (ini dipencet ya)</button>
           </div>
           }
         </ul>
