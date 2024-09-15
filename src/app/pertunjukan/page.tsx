@@ -11,6 +11,7 @@ export default function Header() {
       </div>
       <div>
         <p className="text-xl m-4">#JanganMauMasukLFM</p>
+        <div className="animate-pulse text-blue-500"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfuKhqa6qZgsJRdjVBYvfbebA4QkBJYUUQ12o68n05tavDPpg/viewform">tapi kalo masih bandel bisa klik di sini</a></div>
       </div>
     </div>
   );
