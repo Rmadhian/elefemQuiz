@@ -749,8 +749,8 @@ video {
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #030303;
+  --background: #f0daa9;
+  --foreground: #ededed;
 }
 
 @media (prefers-color-scheme: dark) {
