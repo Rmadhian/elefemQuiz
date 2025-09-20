@@ -102,12 +102,12 @@ export default function Home() {
         {currentQuestion === 2 && 
           <div className="flex w-screen h-screen justify-center items-center flex-col fixed z-20">
             <div className="w-5/6 h-3/4 text-black bg-[#EEEBE3] rounded-3xl p-8 flex flex-col m-2">
-              <div><p className="font-bold text-2xl">Menurutmu, siapa protagonis sebenarnya di AoT?</p></div>
+              <div><p className="font-bold text-2xl">Tiba-tiba ada Titan di luar rumahmu. Apa reaksi pertamamu?</p></div>
               <div className="grid grid-rows-2 grid-cols-2 gap-4 h-full w-full p-4">
-                <div onClick={() => handleAnswer('pertunjukan')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">Historia</div>
-                <div onClick={() => handleAnswer('foto')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">Mikasa</div>
-                <div onClick={() => handleAnswer('video')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">Armin</div>
-                <div onClick={() => handleAnswer('kine')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">Zeke</div>
+                <div onClick={() => handleAnswer('pertunjukan')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">Cari tempat sembunyi</div>
+                <div onClick={() => handleAnswer('foto')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">Melongo, ga bisa gerak</div>
+                <div onClick={() => handleAnswer('video')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">Refleks teriak</div>
+                <div onClick={() => handleAnswer('kine')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">Langsung nyari HP</div>
               </div>
             </div>
             <div><p className="text-xl text-black">#JanganMauMasukLFM</p></div>
@@ -132,13 +132,44 @@ export default function Home() {
         {currentQuestion === 4 && 
           <div className="flex w-screen h-screen justify-center items-center flex-col fixed z-20">
             <div className="w-5/6 h-3/4 text-black bg-[#EEEBE3] rounded-3xl p-8 flex flex-col m-2">
+              
+              {/* --- Bagian Teks Pertanyaan (Tetap Sama) --- */}
               <div><p className="font-bold text-2xl">Kalau punya ODM Gear sehari, kamu bakal ngapain?</p></div>
-              <div className="grid grid-rows-2 grid-cols-2 gap-4 h-full w-full p-4">
-                <div onClick={() => handleAnswer('foto')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">Foto dari atas</div>
-                <div onClick={() => handleAnswer('video')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">Buat travel vlog</div>
-                <div onClick={() => handleAnswer('kine')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">Pelajarin cara kerjanya</div>
-                <div onClick={() => handleAnswer('pertunjukan')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">Bikin rute tour</div>
+
+              {/* === PERUBAHAN DIMULAI DARI SINI === */}
+              {/* 1. Kita buat wrapper baru untuk menampung gambar dan jawaban secara berdampingan */}
+              <div className="flex-1 flex items-center gap-4 mt-4">
+
+                {/* 2. Kolom untuk Gambar (Sebelah Kiri) */}
+                <div className="w-1/2 h-full flex items-center justify-center p-4">
+                  <Image
+                      src="/odmGear.png" // Pastikan nama file sesuai
+                      width={400}
+                      height={400}
+                      alt="ODM Gear from Attack on Titan"
+                      className="object-contain w-full h-full"  
+                  />
+                </div>
+
+                {/* 3. Kolom untuk Pilihan Jawaban (Sebelah Kanan) */}
+                <div className="w-1/2 grid grid-rows-2 grid-cols-2 gap-4">
+                  <div onClick={() => handleAnswer('foto')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">
+                    Foto dari atas
+                  </div>
+                  <div onClick={() => handleAnswer('video')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">
+                    Buat travel vlog
+                  </div>
+                  <div onClick={() => handleAnswer('kine')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">
+                    Pelajarin cara kerjanya
+                  </div>
+                  <div onClick={() => handleAnswer('pertunjukan')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center font-bold active:bg-black active:text-[#EEEBE3] text-center p-2 text-xl">
+                    Bikin rute tour
+                  </div>
+                </div>
+
               </div>
+              {/* === AKHIR DARI PERUBAHAN === */}
+
             </div>
             <div><p className="text-xl text-black">#JanganMauMasukLFM</p></div>
           </div>
@@ -228,47 +259,19 @@ export default function Home() {
         {currentQuestion === 8 && 
           <div className="flex w-screen h-screen justify-center items-center flex-col fixed z-20">
             <div className="w-5/6 h-3/4 text-black bg-[#EEEBE3] rounded-3xl p-8 flex flex-col m-2">
-              <div><p className="font-bold text-2xl">Kalau kamu di dunia AoT, kamu mau jadi faksi apa?</p></div>
+              <div><p className="font-bold text-2xl">Di tengah dunia yang kacau, nilai apa yang akan kamu perjuangkan?</p></div>
               <div className="grid grid-rows-2 grid-cols-2 gap-4 h-full w-full p-4">
                 <div onClick={() => handleAnswer('video')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center text-2xl font-bold active:bg-black active:text-[#EEEBE3] text-center p-2">
-                  <Image
-                  src="/survey.png"
-                  width={100}
-                  height={100}
-                  alt="Picture of the author"
-                  className=" object-contain w-4/5 h-4/5"
-                  >
-                  </Image>
+                Kebenaran
                 </div>
                 <div onClick={() => handleAnswer('kine')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center text-2xl font-bold active:bg-black active:text-[#EEEBE3] text-center p-2">
-                  <Image
-                  src="/rroyal.webp"
-                  width={100}
-                  height={100}
-                  alt="Picture of the author"
-                  className=" object-contain w-4/5 h-4/5"
-                  >
-                  </Image>
+                Kebebasan
                 </div>
                 <div onClick={() => handleAnswer('foto')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center text-xl font-bold active:bg-black active:text-[#EEEBE3] text-center p-2">
-                  <Image
-                  src="/garisson.png"
-                  width={100}
-                  height={100}
-                  alt="Picture of the author"
-                  className=" object-contain w-4/5 h-4/5"
-                  >
-                  </Image>
+                Kemanusiaan
                 </div>
                 <div onClick={() => handleAnswer('pertunjukan')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center text-2xl font-bold active:bg-black active:text-[#EEEBE3] text-center p-2">
-                  <Image
-                  src="/militer.png"
-                  width={100}
-                  height={100}
-                  alt="Picture of the author"
-                  className=" object-contain w-4/5 h-4/5"
-                  >
-                  </Image>
+                Ketertiban
                 </div>
               </div>
             </div>
