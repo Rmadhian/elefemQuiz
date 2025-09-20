@@ -565,6 +565,9 @@ video {
 .h-screen {
   height: 100vh;
 }
+.w-1\/2 {
+  width: 50%;
+}
 .w-2\/3 {
   width: 66.666667%;
 }
@@ -580,14 +583,8 @@ video {
 .w-screen {
   width: 100vw;
 }
-.w-1\/2 {
-  width: 50%;
-}
 .flex-1 {
   flex: 1 1 0%;
-}
-.flex-grow {
-  flex-grow: 1;
 }
 @keyframes bounce {
 
@@ -636,6 +633,9 @@ video {
 }
 .gap-4 {
   gap: 1rem;
+}
+.break-words {
+  overflow-wrap: break-word;
 }
 .rounded-2xl {
   border-radius: 1rem;
@@ -733,6 +733,10 @@ video {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 .text-xl {
   font-size: 1.25rem;
