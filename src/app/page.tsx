@@ -255,16 +255,16 @@ export default function Home() {
             <div className="w-5/6 h-3/4 text-black bg-[#EEEBE3] rounded-3xl p-8 flex flex-col m-2">
               <div><p className="font-bold text-2xl">Di tengah dunia yang kacau, nilai apa yang akan kamu perjuangkan?</p></div>
               <div className="grid grid-rows-2 grid-cols-2 gap-4 h-full w-full p-4">
-                <div onClick={() => handleAnswer('video')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center text-2xl font-bold active:bg-black active:text-[#EEEBE3] text-center p-2">
+                <div onClick={() => handleAnswer('video')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center text-xl font-bold active:bg-black active:text-[#EEEBE3] text-center p-2">
                 Kebenaran
                 </div>
-                <div onClick={() => handleAnswer('kine')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center text-2xl font-bold active:bg-black active:text-[#EEEBE3] text-center p-2">
+                <div onClick={() => handleAnswer('kine')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center text-xl font-bold active:bg-black active:text-[#EEEBE3] text-center p-2">
                 Kebebasan
                 </div>
                 <div onClick={() => handleAnswer('foto')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center text-xl font-bold active:bg-black active:text-[#EEEBE3] text-center p-2">
                 Kemanusiaan
                 </div>
-                <div onClick={() => handleAnswer('pertunjukan')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center text-2xl font-bold active:bg-black active:text-[#EEEBE3] text-center p-2">
+                <div onClick={() => handleAnswer('pertunjukan')} className="cursor-pointer bg-black w-full h-full rounded-3xl border-black bg-inherit border-2 items-center flex justify-center text-xl font-bold active:bg-black active:text-[#EEEBE3] text-center p-2">
                 Ketertiban
                 </div>
               </div>
