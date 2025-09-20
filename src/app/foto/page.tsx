@@ -20,7 +20,8 @@ export default function Header() {
       <div>
         <p className="text-xl m-4 text-black">#JanganMauMasukLFM</p>
       </div>
-      <div className="animate-pulse text-blue-500"><a href="https://docs.google.com/forms/d/e/1FAIpQLScno7_XMVyPf6mv7T7-r7o9ZiQQ0IEOETHR-NhdxnbQdM506w/viewform"> Tapi kalo masih bandel dan mau melihat dunia di luar tembok #jmmlfm, klik ini</a></div>
+      <div className="animate-pulse text-blue-500 text-center"><a href="https://docs.google.com/forms/d/e/1FAIpQLScno7_XMVyPf6mv7T7-r7o9ZiQQ0IEOETHR-NhdxnbQdM506w/viewform"> Tapi kalo masih bandel dan mau melihat dunia di luar tembok #jmmlfm, klik ini</a></div>
     </div>
   );
+
 }
