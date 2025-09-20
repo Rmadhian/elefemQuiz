@@ -1,18 +1,26 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
     <div className="flex w-screen h-screen justify-center items-center flex-col">
-      <div><p className="text-2xl">Ternyata, kamu cocok masuk...</p></div>
-      <div><h1 className="font-bold text-5xl m-4">FOTOGRAFI</h1></div>
-      <div className="w-2/3 text-center text-xl"><p>Bidang untuk kamu-kamu yang feeds instagramnya estetik dan suka jalan-jalan sambil hunting foto. Mulai dari kamera lensa tele sampai analog semuanya ada. Pengen akses buat ngedokumentasiin semua acara ITB tanpa perlu seleksi? aman aja bos. Gapunya kamera? gausah takut karena LFM punya banyak kamera yang siap untuk kamu pinjam! GAS JOIN</p></div>
       <div>
-        <a href="/"><button className="border-2 border-white px-4 py-2 text-xl rounded-2xl m-4 animate-bounce">Coba lagi</button></a>
+        <Image
+          src="./foto.svg"
+          width={600}
+          height={600}
+          alt="Picture of the author"
+          className=" object-cover"
+        >
+        </Image></div>
+        <div className="w-2/3 text-center text-xl text-black"><p>Buat kamu yang feeds Instagram-nya estetik dan suka jalan-jalan sambil hunting foto. Di sini, kamu nggak cuma belajar soal teknis, tapi juga soal menangkap momen yang tepat, karena satu jepretan bisa mengungkap kebenaran yang lebih kuat dari ribuan kata. Pengen akses buat ngedokumentasiin semua acara ITB tanpa seleksi? Aman, bos. Nggak punya kamera? Santai, LFM punya banyak kamera yang siap kamu pinjam!</p></div>
+      <div>
+        <a href="/"><button className="border-2 border-black px-4 py-2 text-xl m-4 animate-bounce text-black">Coba lagi</button></a>
       </div>
       <div>
-        <p className="text-xl m-4">#JanganMauMasukLFM</p>
+        <p className="text-xl m-4 text-black">#JanganMauMasukLFM</p>
       </div>
-      <div className="animate-pulse text-blue-500"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfuKhqa6qZgsJRdjVBYvfbebA4QkBJYUUQ12o68n05tavDPpg/viewform">tapi kalo masih bandel bisa klik di sini</a></div>
+      <div className="animate-pulse text-blue-500"><a href="https://docs.google.com/forms/d/e/1FAIpQLScno7_XMVyPf6mv7T7-r7o9ZiQQ0IEOETHR-NhdxnbQdM506w/viewform"> Tapi kalo masih bandel dan mau melihat dunia di luar tembok #jmmlfm, klik ini</a></div>
     </div>
   );
 }
